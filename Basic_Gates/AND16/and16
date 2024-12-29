@@ -1,0 +1,53 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x1268061c0 .scope module, "and16gate_tb" "and16gate_tb" 2 1;
+ .timescale 0 0;
+v0x1268166b0_0 .net "t_out", 15 0, L_0x1268168e0;  1 drivers
+v0x126816760_0 .var "t_x", 15 0;
+v0x126816810_0 .var "t_y", 15 0;
+S_0x126806330 .scope module, "my_gate" "and16gate" 2 4, 3 1 0, S_0x1268061c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "x";
+    .port_info 1 /INPUT 16 "y";
+    .port_info 2 /OUTPUT 16 "out";
+L_0x1268168e0 .functor AND 16, v0x126816760_0, v0x126816810_0, C4<1111111111111111>, C4<1111111111111111>;
+v0x126806540_0 .net "out", 15 0, L_0x1268168e0;  alias, 1 drivers
+v0x1268164f0_0 .net "x", 15 0, v0x126816760_0;  1 drivers
+v0x1268165a0_0 .net "y", 15 0, v0x126816810_0;  1 drivers
+    .scope S_0x1268061c0;
+T_0 ;
+    %vpi_call 2 6 "$monitor", "t_x=%b, t_y=%b, t_out=%b", v0x126816760_0, v0x126816810_0, v0x1268166b0_0 {0 0 0};
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x126816760_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x126816810_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 16;
+    %store/vec4 v0x126816760_0, 0, 16;
+    %pushi/vec4 1, 0, 16;
+    %store/vec4 v0x126816810_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 4707, 0, 16;
+    %store/vec4 v0x126816760_0, 0, 16;
+    %pushi/vec4 9314, 0, 16;
+    %store/vec4 v0x126816810_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 16;
+    %store/vec4 v0x126816760_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x126816810_0, 0, 16;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "and16_tb.v";
+    "and16.v";
