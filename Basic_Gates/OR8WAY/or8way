@@ -1,0 +1,99 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x1387075d0 .scope module, "or8waygate_tb" "or8waygate_tb" 2 1;
+ .timescale 0 0;
+v0x138722b20_0 .net "t_out", 0 0, L_0x1387248a0;  1 drivers
+v0x138722bb0_0 .var "t_x", 15 0;
+S_0x138707740 .scope module, "my_gate" "or8waygate" 2 4, 3 1 0, S_0x1387075d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "x";
+    .port_info 1 /OUTPUT 1 "out";
+L_0x138722dc0 .functor OR 1, L_0x138722c40, L_0x138722d20, C4<0>, C4<0>;
+L_0x138722ff0 .functor OR 1, L_0x138722dc0, L_0x138722ed0, C4<0>, C4<0>;
+L_0x138723180 .functor OR 1, L_0x138722ff0, L_0x1387230e0, C4<0>, C4<0>;
+L_0x138723360 .functor OR 1, L_0x138723180, L_0x138723290, C4<0>, C4<0>;
+L_0x1387234f0 .functor OR 1, L_0x138723360, L_0x138723450, C4<0>, C4<0>;
+L_0x138722f70 .functor OR 1, L_0x1387234f0, L_0x138723630, C4<0>, C4<0>;
+L_0x138723930 .functor OR 1, L_0x138722f70, L_0x138723890, C4<0>, C4<0>;
+L_0x138723b50 .functor OR 1, L_0x138723930, L_0x138723a60, C4<0>, C4<0>;
+L_0x138723ca0 .functor OR 1, L_0x138723b50, L_0x138723c00, C4<0>, C4<0>;
+L_0x138723f00 .functor OR 1, L_0x138723ca0, L_0x138723e00, C4<0>, C4<0>;
+L_0x138724050 .functor OR 1, L_0x138723f00, L_0x138723fb0, C4<0>, C4<0>;
+L_0x1387242b0 .functor OR 1, L_0x138724050, L_0x1387241a0, C4<0>, C4<0>;
+L_0x138724400 .functor OR 1, L_0x1387242b0, L_0x138724360, C4<0>, C4<0>;
+L_0x138724240 .functor OR 1, L_0x138724400, L_0x138724560, C4<0>, C4<0>;
+L_0x1387248a0 .functor OR 1, L_0x138724240, L_0x138724800, C4<0>, C4<0>;
+v0x1387056d0_0 .net *"_ivl_1", 0 0, L_0x138722c40;  1 drivers
+v0x138721460_0 .net *"_ivl_11", 0 0, L_0x1387230e0;  1 drivers
+v0x138721500_0 .net *"_ivl_12", 0 0, L_0x138723180;  1 drivers
+v0x1387215b0_0 .net *"_ivl_15", 0 0, L_0x138723290;  1 drivers
+v0x138721660_0 .net *"_ivl_16", 0 0, L_0x138723360;  1 drivers
+v0x138721750_0 .net *"_ivl_19", 0 0, L_0x138723450;  1 drivers
+v0x138721800_0 .net *"_ivl_20", 0 0, L_0x1387234f0;  1 drivers
+v0x1387218b0_0 .net *"_ivl_23", 0 0, L_0x138723630;  1 drivers
+v0x138721960_0 .net *"_ivl_24", 0 0, L_0x138722f70;  1 drivers
+v0x138721a70_0 .net *"_ivl_27", 0 0, L_0x138723890;  1 drivers
+v0x138721b20_0 .net *"_ivl_28", 0 0, L_0x138723930;  1 drivers
+v0x138721bd0_0 .net *"_ivl_3", 0 0, L_0x138722d20;  1 drivers
+v0x138721c80_0 .net *"_ivl_31", 0 0, L_0x138723a60;  1 drivers
+v0x138721d30_0 .net *"_ivl_32", 0 0, L_0x138723b50;  1 drivers
+v0x138721de0_0 .net *"_ivl_35", 0 0, L_0x138723c00;  1 drivers
+v0x138721e90_0 .net *"_ivl_36", 0 0, L_0x138723ca0;  1 drivers
+v0x138721f40_0 .net *"_ivl_39", 0 0, L_0x138723e00;  1 drivers
+v0x1387220d0_0 .net *"_ivl_4", 0 0, L_0x138722dc0;  1 drivers
+v0x138722160_0 .net *"_ivl_40", 0 0, L_0x138723f00;  1 drivers
+v0x138722210_0 .net *"_ivl_43", 0 0, L_0x138723fb0;  1 drivers
+v0x1387222c0_0 .net *"_ivl_44", 0 0, L_0x138724050;  1 drivers
+v0x138722370_0 .net *"_ivl_47", 0 0, L_0x1387241a0;  1 drivers
+v0x138722420_0 .net *"_ivl_48", 0 0, L_0x1387242b0;  1 drivers
+v0x1387224d0_0 .net *"_ivl_51", 0 0, L_0x138724360;  1 drivers
+v0x138722580_0 .net *"_ivl_52", 0 0, L_0x138724400;  1 drivers
+v0x138722630_0 .net *"_ivl_55", 0 0, L_0x138724560;  1 drivers
+v0x1387226e0_0 .net *"_ivl_56", 0 0, L_0x138724240;  1 drivers
+v0x138722790_0 .net *"_ivl_59", 0 0, L_0x138724800;  1 drivers
+v0x138722840_0 .net *"_ivl_7", 0 0, L_0x138722ed0;  1 drivers
+v0x1387228f0_0 .net *"_ivl_8", 0 0, L_0x138722ff0;  1 drivers
+v0x1387229a0_0 .net "out", 0 0, L_0x1387248a0;  alias, 1 drivers
+v0x138722a40_0 .net "x", 15 0, v0x138722bb0_0;  1 drivers
+L_0x138722c40 .part v0x138722bb0_0, 0, 1;
+L_0x138722d20 .part v0x138722bb0_0, 1, 1;
+L_0x138722ed0 .part v0x138722bb0_0, 2, 1;
+L_0x1387230e0 .part v0x138722bb0_0, 3, 1;
+L_0x138723290 .part v0x138722bb0_0, 4, 1;
+L_0x138723450 .part v0x138722bb0_0, 5, 1;
+L_0x138723630 .part v0x138722bb0_0, 6, 1;
+L_0x138723890 .part v0x138722bb0_0, 7, 1;
+L_0x138723a60 .part v0x138722bb0_0, 8, 1;
+L_0x138723c00 .part v0x138722bb0_0, 9, 1;
+L_0x138723e00 .part v0x138722bb0_0, 10, 1;
+L_0x138723fb0 .part v0x138722bb0_0, 11, 1;
+L_0x1387241a0 .part v0x138722bb0_0, 12, 1;
+L_0x138724360 .part v0x138722bb0_0, 13, 1;
+L_0x138724560 .part v0x138722bb0_0, 14, 1;
+L_0x138724800 .part v0x138722bb0_0, 15, 1;
+    .scope S_0x1387075d0;
+T_0 ;
+    %vpi_call 2 6 "$monitor", "t_x=%b, t_out=%b", v0x138722bb0_0, v0x138722b20_0 {0 0 0};
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x138722bb0_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 9248, 0, 16;
+    %store/vec4 v0x138722bb0_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 513, 0, 16;
+    %store/vec4 v0x138722bb0_0, 0, 16;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "or8way_tb.v";
+    "or8way.v";
