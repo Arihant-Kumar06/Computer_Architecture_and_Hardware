@@ -1,7 +1,7 @@
-module ram4k(
+module ram16k(
     input load,clk,
     input [15:0]value,
-    input [14:0] address,
+    input [13:0] address,
     output reg [15:0]out
 );
 reg [15:0] register_array [16383:0];
